@@ -4,7 +4,7 @@ const app = express();
 const session = require("express-session");
 const cookies= require("cookie-parser");
 
-app.use(session({secret:"responsabilidad", resave:false, saveUninitialized:false}));
+app.use(session({secret:"vaxSecret", resave:false, saveUninitialized:false}));
 app.use(cookies());
 app.use(userLoggedMiddleware);
 app.use(express.urlencoded({extended:false}))
